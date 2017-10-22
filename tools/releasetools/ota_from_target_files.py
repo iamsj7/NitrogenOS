@@ -497,7 +497,7 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   if "selinux_fc" in OPTIONS.info_dict:
     WritePolicyConfig(OPTIONS.info_dict["selinux_fc"], output_zip)
 
-    model = GetBuildProp("ro.product.model", OPTIONS.info_dict)
+#   model = GetBuildProp("ro.product.model", OPTIONS.info_dict)
     build = GetBuildProp("ro.build.date", OPTIONS.info_dict)
 
     script.Print("- Nitrogen Project ---------------------------");
@@ -508,7 +508,7 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
     script.Print("*  * ***  *  * *  **** **** *** *  *  **** ***");
     script.Print("- By xyyx -------------------- Android 8.1.0 -");
     script.Print(" Compiled: %s "%(build));
-    script.Print(" For: %s   "%(model));
+#   script.Print(" For: %s   "%(model));
     script.Print("----------------------------------------------");
   recovery_mount_options = OPTIONS.info_dict.get("recovery_mount_options")
 
