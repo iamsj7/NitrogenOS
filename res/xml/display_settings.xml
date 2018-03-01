@@ -133,7 +133,13 @@
         android:title="@string/display_vr_pref_title"
         android:fragment="com.android.settings.display.VrDisplayPreferencePicker" />
 
-    <com.nitrogen.settings.preferences.SystemSettingSwitchPreference
+    <com.android.settings.display.FontDialogPreference
+        android:key="custom_font"
+        android:title="@string/font_picker_title"
+        android:icon="@drawable/ic_font_picker"
+        android:persistent="false" />
+
+    <com.nitrogen.settings.preference.SystemSettingSwitchPreference
         android:key="enable_conditions"
         android:title="@string/dashboard_conditions_title"
         android:summaryOn="@string/summary_dashboard_conditions_enabled"
