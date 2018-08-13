@@ -1078,6 +1078,9 @@ status_t OMXNodeInstance::useBuffer(
 
         case OMXBuffer::kBufferTypeSharedMem: {
             if (mPortMode[portIndex] != IOMX::kPortModePresetByteBuffer
+#ifdef NEEDS_LEGACY_CAMERA_HAL1_DYN_NATIVE_HANDLE
+                    && mPortMode[portIndex] != IOMX::kPortModeDynamicNativeHandle
+#endif
                     && mPortMode[portIndex] != IOMX::kPortModeDynamicANWBuffer) {
                 break;
             }
