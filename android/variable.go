@@ -75,6 +75,10 @@ type variableProperties struct {
 			Cppflags []string
 		}
 
+                Needs_legacy_camera_hal1_dyn_native_handle struct {
+                        Cppflags []string
+                }
+
 		Uses_media_extensions struct {
 			Cflags []string
 		}
@@ -155,6 +159,7 @@ type productVariables struct {
 	Treble                     *bool `json:",omitempty"`
 	Pdk                        *bool `json:",omitempty"`
 	Uses_media_extensions      *bool `json:",omitempty"`
+        Needs_legacy_camera_hal1_dyn_native_handle  *bool `json:",omitempty"`
 
 	IntegerOverflowExcludePaths *[]string `json:",omitempty"`
 
